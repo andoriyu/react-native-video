@@ -85,7 +85,7 @@ static NSString *const statusKeyPath = @"status";
 
 #pragma mark - Player and source
 
-- (void)setSrc:(NSDictionary *)source {
+- (void)setSource:(NSDictionary *)source {
   [_playerItem removeObserver:self forKeyPath:statusKeyPath];
   _playerItem = [self playerItemForSource:source];
   [_playerItem addObserver:self forKeyPath:statusKeyPath options:0 context:nil];
